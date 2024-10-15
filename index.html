@@ -371,7 +371,7 @@
 		
 		<div class="main-content flag">
                     <div id="q1">
-                        <a class="survey_button" href="{offer_link}" data-bq="1">ACHETER MAINTENANT</a>
+                        <a class="survey_button imageLink" href="{offer_link}" data-bq="1">ACHETER MAINTENANT</a>
                     </div>
                 </div>
 		
@@ -627,7 +627,19 @@ Publié il y a 3 jours</div>
     
     <link rel="stylesheet" href="./index_files/faq.css">
     
-
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all elements with the class "imageLink"
+        var imageLinks = document.querySelectorAll(".imageLink");
+        // Loop through each element and attach the click event listener
+        imageLinks.forEach(function(link) {
+            link.style.cursor = 'pointer'; // Ensure cursor pointer style is applied
+            link.addEventListener("click", function() {
+                window.location.href = '{offer_link}';
+            });
+        });
+    });
+</script>
 
 
 
